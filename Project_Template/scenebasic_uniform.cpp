@@ -18,6 +18,10 @@ SceneBasic_Uniform::SceneBasic_Uniform() : rotation(0.0f), plane(10.0f, 10.0f, 1
 
     meshbackground = ObjMesh::load("../Project_Template/media/CAVEWALLStetured.obj",
         true);
+
+    Solider = ObjMesh::load("../Project_Template/media/soilder.obj",
+        true);
+
 }
 
 //constructor for teapot
@@ -86,9 +90,9 @@ void SceneBasic_Uniform::initScene()
     //prog.setUniform("Light[3].La", vec3(0.1f, 0.1f, 0.1f));  //setting ambient value
 
 
-    prog.setUniform("Light[0].L", vec3(1));
-    prog.setUniform("Light[1].L", vec3(1));
-    prog.setUniform("Light[2].L", vec3(0.5));
+    prog.setUniform("Light[0].L", vec3(0.5f, 0.5f, 0.5f));
+    prog.setUniform("Light[1].L", vec3(0.5f, 0.5f, 0.5f));
+    prog.setUniform("Light[2].L", vec3(0.5f, 0.5f, 0.5f));
 
     //prog.setUniform("Spot.L", vec3(0.9f));
     //prog.setUniform("Spot.La", vec3(0.5f));
@@ -140,12 +144,11 @@ void SceneBasic_Uniform::render()
     //prog.setUniform("Spot.Direction", normalMatrix * vec3(-lightPos));
 
     setMatrices(); //we set matrices 
-    //torus.render();     //we render the torus
-    //teapot.render();  
+ 
     prog.setUniform("Material.Kd", 0.4f, 0.4f, 0.4f);
     prog.setUniform("Material.Ks", 0.9f, 0.9f, 0.9f);
     prog.setUniform("Material.Ka", 0.5f, 0.5f, 0.5f);
-    prog.setUniform("Material.Shininess", 1.0f);
+    prog.setUniform("Material.Shininess", 0.8f);
     prog.setUniform("Tex1", 0);
     model = mat4(1.0f);
     model = glm::rotate(model, glm::radians(90.0f), vec3(0.0f, 1.0f, 0.0f));
@@ -161,16 +164,12 @@ void SceneBasic_Uniform::render()
     prog.setUniform("Material.Kd", 0.1f, 0.1f, 0.1f);
     prog.setUniform("Material.Ks", 0.9f, 0.9f, 0.9f);
     prog.setUniform("Material.Ka", 0.1f, 0.1f, 0.1f);
-    prog.setUniform("Material.Shininess", 0.1f);
+    prog.setUniform("Material.Shininess", 1.0f);
     model = mat4(1.0f);
     prog.setUniform("Tex1", 2);
-    //model * glm::scale(model, vec3(20));
-    model = glm::rotate(model, glm::radians(90.0f * rotation), vec3(0.0f, 1.0f, 0.0f));
-    model = glm::translate(model, vec3(0, -6, -7));
-    
-    
-    
-    
+    model = glm::scale(model, vec3(1.8f, 1.8f, 1.8f));
+    //model = glm::rotate(model, glm::radians(90.0f * rotation), vec3(0.0f, 1.0f, 0.0f));
+    model = glm::translate(model, vec3(0, -4, -2));
     setMatrices();
     plane.render();
 
@@ -190,6 +189,33 @@ void SceneBasic_Uniform::render()
     //model = glm::translate(model, vec3(80000, -8, -3));
     setMatrices();
     meshbackground->render();
+
+
+
+    glActiveTexture(GL_TEXTURE3);
+    glBindTexture(GL_TEXTURE_2D, moss);
+
+    //vec4 lightPos = vec4(0.0f, 10.0f, 0.0f, 1.0f);
+    //prog.setUniform("Spot.Position", vec3(view * lightPos));
+    //mat3 normalMatrix = mat3(vec3(view[0]), vec3(view[1]), vec3(view[2]));
+    //prog.setUniform("Spot.Direction", normalMatrix * vec3(-lightPos));
+
+    setMatrices(); //we set matrices 
+ 
+    prog.setUniform("Material.Kd", 0.4f, 0.4f, 0.4f);
+    prog.setUniform("Material.Ks", 0.9f, 0.9f, 0.9f);
+    prog.setUniform("Material.Ka", 0.5f, 0.5f, 0.5f);
+    prog.setUniform("Material.Shininess", 1.0f);
+    prog.setUniform("Tex1", 0);
+    model = mat4(1.0f);
+    model = glm::scale(model, vec3(1.0f, 1.0f, 1.0f));
+    model = glm::rotate(model, glm::radians(90.0f * rotation), vec3(0.0f, 1.0f, 0.0f));
+ 
+    model = glm::translate(model, vec3(-1, 0, 0));
+    setMatrices();
+    Solider->render();
+
+
 
 
 }

@@ -21,12 +21,12 @@ out vec2 TexCoord;
 
 void main() 
 { 
+
         TexCoord = VertexTexCoord;
 
    //transfrom normal from model coordinates to view coordinates
    Normal = normalize( NormalMatrix * VertexNormal);
 
-    //vec3 Position = (ModelViewMatrix * vec4(VertexPosition,1.0)).xyz;
 
    //transform vertex position from model coordinates to view coordinates
    Position = (ModelViewMatrix * vec4(VertexPosition,1.0)).xyz;

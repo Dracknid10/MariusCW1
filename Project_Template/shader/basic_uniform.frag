@@ -25,19 +25,19 @@ uniform struct LightInfo
   vec3 L; // Diffuse and specular light intensity
 } Light[3];
 
-uniform struct SpotLightInfo 
-{
-
-vec3 Position; // Position in cam coords
-vec3 L; // Diffuse/spec intensity
-vec3 La; // Amb intensity
-vec3 Direction; // Direction of the spotlight in cam coords.
-float Exponent; // Angular attenuation exponent
-float Cutoff; // Cutoff angle (between 0 and pi/2)
-
-
-} Spot;
-
+//uniform struct SpotLightInfo 
+//{
+//
+//vec3 Position; // Position in cam coords
+//vec3 L; // Diffuse/spec intensity
+//vec3 La; // Amb intensity
+//vec3 Direction; // Direction of the spotlight in cam coords.
+//float Exponent; // Angular attenuation exponent
+//float Cutoff; // Cutoff angle (between 0 and pi/2)
+//
+//
+//} Spot;
+//
 
 //material information struct
 uniform struct MaterialInfo 

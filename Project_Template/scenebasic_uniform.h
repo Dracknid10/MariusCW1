@@ -32,6 +32,7 @@ private:
     Plane plane; //plane surface
     std::unique_ptr<ObjMesh> mesh; //chest mesh
     std::unique_ptr<ObjMesh> meshbackground; //background mesh
+    std::unique_ptr<ObjMesh> Solider; //background mesh
 
 
     GLuint wood = Texture::loadTexture("../Project_Template/media/texture/hardwood2_diffuse.jpg");

@@ -72,23 +72,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>U:\3RD YEAR\comp3015\mariusCW1\Project_Template_Diffuse\Project_Template_Diffuse\Project_Template\Dependencies\include;$(IncludePath)</IncludePath>
-    <LibraryPath>U:\3RD YEAR\comp3015\mariusCW1\Project_Template_Diffuse\Project_Template_Diffuse\Project_Template\Dependencies\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>U:\3RD YEAR\comp3015\marius repo\Project_Template\Dependencies\include;$(IncludePath)</IncludePath>
+    <LibraryPath>U:\3RD YEAR\comp3015\marius repo\Project_Template\Dependencies\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>U:\3RD YEAR\comp3015\mariusCW1\Project_Template_Diffuse\Project_Template_Diffuse\Project_Template\Dependencies\include;$(IncludePath)</IncludePath>
-    <LibraryPath>U:\3RD YEAR\comp3015\mariusCW1\Project_Template_Diffuse\Project_Template_Diffuse\Project_Template\Dependencies\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>U:\3RD YEAR\comp3015\marius repo\Project_Template\Dependencies\include;$(IncludePath)</IncludePath>
+    <LibraryPath>U:\3RD YEAR\comp3015\marius repo\Project_Template\Dependencies\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>U:\3RD YEAR\comp3015\mariusCW1\Project_Template_Diffuse\Project_Template_Diffuse\Project_Template\Dependencies\include;$(IncludePath)</IncludePath>
-    <LibraryPath>U:\3RD YEAR\comp3015\mariusCW1\Project_Template_Diffuse\Project_Template_Diffuse\Project_Template\Dependencies\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>U:\3RD YEAR\comp3015\marius repo\Project_Template\Dependencies\include;$(IncludePath)</IncludePath>
+    <LibraryPath>U:\3RD YEAR\comp3015\marius repo\Project_Template\Dependencies\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>U:\3RD YEAR\comp3015\mariusCW1\Project_Template_Diffuse\Project_Template_Diffuse\Project_Template\Dependencies\include;$(IncludePath)</IncludePath>
-    <LibraryPath>U:\3RD YEAR\comp3015\mariusCW1\Project_Template_Diffuse\Project_Template_Diffuse\Project_Template\Dependencies\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>U:\3RD YEAR\comp3015\marius repo\Project_Template\Dependencies\include;$(IncludePath)</IncludePath>
+    <LibraryPath>U:\3RD YEAR\comp3015\marius repo\Project_Template\Dependencies\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
