@@ -120,17 +120,17 @@ void SceneBasic_Uniform::compile()
 {
 	try {
 
-		//prog.compileShader("shader/basic_uniform.vert");  
-		//prog.compileShader("shader/basic_uniform.frag");
-  //      prog.link();
-  //      prog.use();
+		prog.compileShader("shader/basic_uniform.vert");  
+		prog.compileShader("shader/basic_uniform.frag");
+        prog.link();
+        prog.use();
 
 
-        prog2.compileShader("shader/basic_uniform - Copy.vert");
+ /*       prog2.compileShader("shader/basic_uniform - Copy.vert");
         prog2.compileShader("shader/basic_uniform - Copy.frag");
         prog2.compileShader("shader/basic_uniform.geom");
 		prog2.link();
-        prog2.use();
+        prog2.use();*/
 
 
 
@@ -239,13 +239,13 @@ void SceneBasic_Uniform::render()
 
 
 
-    setMatrices(prog2);
+    //setMatrices(prog2);
 
-    glBindVertexArray(sprites);
-    glDrawArrays(GL_POINTS, 0, numSprites);
+    //glBindVertexArray(sprites);
+    //glDrawArrays(GL_POINTS, 0, numSprites);
 
 
-    glFinish();
+    //glFinish();
 
 }
 
