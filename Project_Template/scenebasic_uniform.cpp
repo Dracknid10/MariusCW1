@@ -126,13 +126,13 @@ void SceneBasic_Uniform::compile()
         prog.use();
 
 
- /*       prog2.compileShader("shader/basic_uniform - Copy.vert");
+  /*      prog2.compileShader("shader/basic_uniform - Copy.vert");
         prog2.compileShader("shader/basic_uniform - Copy.frag");
         prog2.compileShader("shader/basic_uniform.geom");
 		prog2.link();
-        prog2.use();*/
+        prog2.use();
 
-
+*/
 
 
 	} catch (GLSLProgramException &e) {

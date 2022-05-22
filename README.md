@@ -17,3 +17,15 @@ the important files are,
  
 
  a more detailed look through the project is listed here https://youtu.be/90bjbk2LE1o please feel free to leave a comment on how i could improve. :D
+
+
+
+#C2 - Optimised Developer Tool with documentatiom
+
+for more infomation follow this youtube link https://youtu.be/TWvodLFb7sU 
+
+failed trys of point sprites and edge detection code can be seen commented out.
+the geometry shader was added to generate point sprites as well as copies of the frag and vert shader
+program (prog) is the vertex animation 
+(prog2) is the point sprite attempts - the use() for these is commented out so the program compiles successfully
+
