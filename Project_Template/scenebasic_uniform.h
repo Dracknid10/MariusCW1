@@ -21,11 +21,21 @@ class SceneBasic_Uniform : public Scene
 {
 private:
     GLSLProgram prog;
+    GLSLProgram prog2;
+    GLSLProgram prog3;
     
     //Torus torus;
     //Teapot teapot;
 
-    void setMatrices();
+    void setMatrices(GLSLProgram& p);
+
+
+    float angle, flow;
+   
+    GLuint fsQuad, fboHandle, renderTex;
+    void setupFBO();
+    void pass1();
+    void pass2();
 
     void compile();
 
@@ -39,7 +49,14 @@ private:
     GLuint moss = Texture::loadTexture("../Project_Template/media/texture/moss.png");
     GLuint water = Texture::loadTexture("../Project_Template/media/texture/bluewater.png");
 
+
+    GLuint sprites;
+    int numSprites;
+    float* locations;
+
     float rotation;
+
+   
 
 
 public:
